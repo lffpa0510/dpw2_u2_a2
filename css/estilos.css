@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+nav ul li {
+    margin-inline: 30px;
+}
+
+nav .nav-link::after {
+    border-bottom: 3px solid var(--main-color);
+    content: "";
+    height: 3px;
+    width: 0;
+    margin: auto;
+    display: block;
+}
+
+nav .nav-link:hover {
+    font-weight: var(--bold);    
+}
+
+nav .nav-link.active::after,
+nav .nav-link:hover::after {
+    width: 100%;
+}
+
+nav .nav-link:hover::after {
+    transition: width 0.3s linear;
+}
+
+:root {
+    --main-bg: rgba(37, 150, 190, 0.4);
+    --main-color: #2596be;
+    --main-color-alt: #1a6985;
+    --secondary-color: #bea925;
+    --text-color: #707070;
+    --white-color: #ffffff;
+    --black-color: #060606;
+
+
+    --body-font: 'Raleway', sans-serif;
+    --biggest: 38px;
+    --bigger: 28px;
+    --big: 22px;
+    --normal: 16px;
+    --small: 12px;
+    --smaller: 10px;
+    --smallest: 8px;
+
+    --light: 400;
+    --normal: 500;
+    --medium: 600;
+    --bold: 700;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--normal-size);
+    font-weight: var(--medium);
+    line-height: 28px;
+    overflow-x: hidden;
+}
+
+img {
+    vertical-align: middle;
+    height: auto;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+table {
+    white-space: nowrap;
+}
+
+section {
+    padding: 3vw 0vw 0vw;
+    min-height: 100%;
+    width: 100%;
+}
+
+nav .nav-item {
+    font-size: var(--big);
+}
+
+nav .navbar-brand {
+    text-transform: uppercase;
+    font-size: var(--bigger);
+    color: var(--main-color-alt);
+}
+
+#main,
+#register,
+#access,
+#welcome {
+    background-color: var(--main-bg);
+    width: 100%;
+    background-size: cover;
+    padding: 3vw;
+    flex-direction: column;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main h1,
+#access h1,
+#welcome h1 {
+    color: var(--main-color-alt);
+    font-size: 50px;
+    letter-spacing: 5px;
+    border-bottom: 3px solid var(--secondary-color);
+    width: 80%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#main img {
+    width: 60%;
+    box-shadow: 0 0 15px 8px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    margin-top: 55px;
+}
+
+#main p {
+    font-size: var(--big);
+    line-height: 2;
+    text-align: justify;
+    font-weight: var(--light);
+    margin-top: 25px;
+    width: 60%
+}
+
+#register .form-container,
+#access .form-container {
+    width: 30%;
+}
+
+#register form label,
+#access form label {
+    font-size: var(--big);
+    font-weight: var(--light);
+    color: var(--main-color-alt);
+    border-bottom: 3px solid var(--secondary-color);
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+#register form button,
+#access form button {
+    font-size: var(--big);
+    display: flex;
+    margin-inline: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+footer {
+    padding: 5vw;
+    background: rgb(15, 20, 24);
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    box-shadow: inset 0px 7px 3px -3px rgba(50, 50, 50, 0.30) inset;
+}
+
+footer .footer-col {
+    padding-bottom: 30px;
+    width: 25%;
+}
+
+footer h3 {
+    font-weight: var(--normal);
+    padding-bottom: 20px;
+    font-size: var(--big);
+    letter-spacing: 5px;    
+    color: var(--main-color-alt);
+    text-align:center;
+    border-bottom: 3px solid var(--main-color);
+}
+
+footer li {
+    list-style: none;
+    color: var(--main-color);
+    font-weight: var(--medium);
+    font-size: var(--normal);
+    letter-spacing: 4px;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+footer li:hover {
+    letter-spacing: 2px;
+    font-size: var(--big);
+    color: var(--main-color-alt);
+}
+
+footer .copyright {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    border-top: 3px solid var(--main-color-alt);
+}
+
+footer .copyright p {
+    margin-top: 15px;
+    font-size: var(--normal);
+    color: var(--text-color);    
+}
